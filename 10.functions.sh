@@ -24,6 +24,4 @@ fi # fi mean reverse of if,indicating condition end
 
  VALIDATE $? "Nginx installation"
 
- yum install tomcat -y
-
- VALIDATE $? "tomcat installation"
+ 
