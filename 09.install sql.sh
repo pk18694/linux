@@ -5,9 +5,10 @@ ID=$(id -u)
 if [ $ID -ne 0 ]
 then
     echo "error: : please run the script with root access"
+    exit 1 # you can give otherthan 0
 else
     echo "you are root user"
-fi
+fi # fi mean reverse of if,indicating condition end
 
 yum install mysql -y
 
