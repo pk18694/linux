@@ -3,7 +3,7 @@
 ID=$(id -u)
 
 VALIDATE(){ 
-    if [ $1 ne 0 ]
+    if [ $1 -ne 0 ] 
     then
         echo "ERROR:: $2 ..failed"
         exit 1 # you can give otherthan 0
@@ -24,4 +24,8 @@ fi # fi mean reverse of if,indicating condition end
 
  VALIDATE $? "Nginx installation"
 
- 
+ yum install wget -y
+
+ VALIDATE $? "wget installation"
+
+
