@@ -6,7 +6,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE="/temp/$0 $TIMESTAMP.log"
+LOGFILE="/tmp/$0 $TIMESTAMP.log"
 
 VALIDATE(){ 
     if [ $1 -ne 0 ] 
