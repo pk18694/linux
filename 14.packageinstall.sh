@@ -38,3 +38,5 @@ do
     else 
         yum install $package -y  &>> $LOGFILE 
         VALIDATE $? "Installation of $package"
+    fi
+done 
