@@ -35,7 +35,7 @@ do
     yum list installed $package &>> $LOGFILE
     if [ $? -eq 0 ]
     then 
-        echo "package already installed skipping"
+        echo "package already installed $Y skipping $N"
     else 
         yum install $package -y  &>> $LOGFILE 
         VALIDATE $? "Installation of $package"
