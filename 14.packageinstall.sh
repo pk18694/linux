@@ -24,10 +24,11 @@ VALIDATE(){
 }
 if [ $ID -eq 0 ]
 then 
-echo -e "$G you are a root user $N"
+    echo -e "$G you are a root user $N"
 else 
-echo -e "$R you are not root user $N"
-exit -1
+    echo -e "$R you are not root user $N"
+    exit 1
+fi
 
 for package in $@
 do 
@@ -39,4 +40,4 @@ do
         yum install $package -y  &>> $LOGFILE 
         VALIDATE $? "Installation of $package"
     fi
-done 
+done
