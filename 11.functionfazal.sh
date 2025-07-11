@@ -23,7 +23,7 @@ else
     echo "you are root user"
 fi # fi mean reverse of if,indicating condition end
 
- yum install nginx -y
+ yum install ngfghinx -y
 
  VALIDATE $? "Nginx installation"
 
