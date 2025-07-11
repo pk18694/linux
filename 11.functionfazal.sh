@@ -8,16 +8,16 @@ N="\e[0m"
 VALIDATE(){ 
     if [ $1 -ne 0 ] 
     then
-        echo "ERROR:: $2 ..failed"
+        echo -e "ERROR:: $R $2 ..failed $N "
         exit 1 # you can give otherthan 0
     else
-        echo "$2 ..sucess"
+        echo -e "$G  $2 ..sucess $N"
     fi # fi mean reverse of if,indicating condition end
 }
 
 if [ $ID -ne 0 ]
 then
-    echo "error: : please run the script with root access"
+    echo -e "$R error $N: : please run the script with root access"
     exit 1 # you can give otherthan 0
 else
     echo "you are root user"
