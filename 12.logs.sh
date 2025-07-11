@@ -5,6 +5,9 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/temp/$0 $TIMESTAMP.log"
+
 VALIDATE(){ 
     if [ $1 -ne 0 ] 
     then
@@ -23,11 +26,11 @@ else
     echo "you are root user"
 fi # fi mean reverse of if,indicating condition end
 
- yum install nginx -y
+ yum install nginx -y &>> $LOGFILE 
 
  VALIDATE $? "Nginx installation"
 
- yum install wget -y
+ yum install wget -y &>>$LOGFILE 
 
  VALIDATE $? "wget installation"
 
